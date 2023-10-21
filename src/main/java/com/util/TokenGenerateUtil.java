@@ -1,4 +1,4 @@
-package util;
+package com.util;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -31,7 +31,7 @@ public class TokenGenerateUtil {
      * @param data  传入的数据
      * @return  返回token
      */
-    private static String generateToken(String data) {
+    public static String generateToken(String data) {
         String token = null;
         try {
             //时间戳

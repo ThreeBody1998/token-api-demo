@@ -1,0 +1,19 @@
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: -1
+      max-request-size: -1
+  web:
+    resources:
+      static-locations: classpath:/
+      add-mappings: false
+  datasource:
+    url: jdbc:mysql://192.168.1.9:3306/token_demo?serverTimezone=Asia/Shanghai&characterEncoding=UTF-8&nullCatalogMeansCurrent=true
+    username: root
+    password: Meefo.cn@123
+    driver-class-name: com.mysql.jdbc.Driver
+server:
+  port: 8080
+  tomcat:
+    max-connections: 30000

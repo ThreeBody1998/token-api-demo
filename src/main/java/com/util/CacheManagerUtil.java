@@ -1,5 +1,8 @@
-package bean;
+package com.util;
 
+import com.pojo.custom.CacheEntry;
+import org.springframework.stereotype.Component;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -12,11 +15,12 @@ import java.util.concurrent.TimeUnit;
  * @author 周建泽
  * @date 2023/10/13
  */
-public class CacheManager<K,V> {
+@Component
+public class CacheManagerUtil<K,V> {
     private final Map<K, CacheEntry<V>> cacheMap;
     private final ScheduledExecutorService scheduler;
 
-    public CacheManager() {
+    public CacheManagerUtil() {
         cacheMap = new ConcurrentHashMap<>();
         scheduler = Executors.newScheduledThreadPool(1);
     }
@@ -55,8 +59,11 @@ public class CacheManager<K,V> {
         cacheMap.remove(key);
     }
 
+    /**
+     * 获取缓存键列表
+     * @return  缓存键列表
+     */
     public List<K> getKeys(){
-        Set
-        return (List<K>) cacheMap.keySet();
+        return new ArrayList<>(cacheMap.keySet());
     }
 }

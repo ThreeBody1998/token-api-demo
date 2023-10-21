@@ -1,4 +1,4 @@
-package bean;
+package com.pojo.custom;
 
 import lombok.AllArgsConstructor;
 
@@ -18,11 +18,11 @@ public class CacheEntry<V> {
      * 是否过期
      * @return  布尔值
      */
-    boolean isExpired() {
+    public boolean isExpired() {
         return System.currentTimeMillis() > expirationTimeMillis;
     }
 
-    V getValue() {
+    public V getValue() {
         return value;
     }
 }

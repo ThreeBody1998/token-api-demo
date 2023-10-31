@@ -1,4 +1,4 @@
-package com.enums;
+package com.tokenApi.enums;
 
 /**
  *  Http请求结果枚举类
@@ -9,6 +9,18 @@ public enum HttpResultEnum {
      * 成功编号 200
      */
     SUCCESS(200,"操作成功"),
+    /**
+     * token无效 300
+     */
+    TOKEN_IS_EMPTY(300,"token为空"),
+    /**
+     * token无效 301
+     */
+    TOKEN_IS_INVALID(301,"token无效"),
+    /**
+     * token已过期 302
+     */
+    TOKEN_IS_EXPIRED(302,"token已过期"),
     /**
      * 参数为空 400
      */
@@ -21,7 +33,7 @@ public enum HttpResultEnum {
     /**
      * 参数错误 402
      */
-    PARAM_NOT_ERROR(402,"参数不合法"),
+    PARAM_IS_ERROR(402,"参数错误"),
     /**
      * 操作不合法 402
      */

@@ -1,6 +1,6 @@
-package com.util;
+package com.tokenApi.util;
 
-import com.pojo.custom.CacheEntry;
+import com.tokenApi.pojo.custom.CacheEntry;
 import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +19,10 @@ import java.util.concurrent.TimeUnit;
 public class CacheManagerUtil<K,V> {
     private final Map<K, CacheEntry<V>> cacheMap;
     private final ScheduledExecutorService scheduler;
+    /**
+     * 默认过期时间 3小时
+     */
+    public static long TTL=1000*60*60*3L;
 
     public CacheManagerUtil() {
         cacheMap = new ConcurrentHashMap<>();
@@ -32,6 +36,7 @@ public class CacheManagerUtil<K,V> {
      * @param expirationTimeMillis  过期时间
      */
     public void put(K key, V value, long expirationTimeMillis) {
+        expirationTimeMillis += System.currentTimeMillis();
         CacheEntry<V> entry = new CacheEntry<>(value, expirationTimeMillis);
         cacheMap.put(key, entry);
         // 定时任务，在过期时间后自动销毁缓存条目

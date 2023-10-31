@@ -1,6 +1,7 @@
-package com.util;
+package com.tokenApi.util;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -9,9 +10,10 @@ import java.util.Base64;
 /**
  * description token生成工具类
  * @author 周建泽
- * @date 2023/10/13
+ * @date 2023/10/25
  */
 @Slf4j
+@Component
 public class TokenGenerateUtil {
     /**
      * 盐值-替换为你自己的盐值
@@ -54,9 +56,5 @@ public class TokenGenerateUtil {
             log.error("生成token失败，未找到对应的算法:{}",e.getMessage());
         }
         return token;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(TokenGenerateUtil.generateToken("123"));
     }
 }

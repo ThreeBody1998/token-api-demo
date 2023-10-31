@@ -1,4 +1,4 @@
-package com.pojo.vo;
+package com.tokenApi.pojo.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

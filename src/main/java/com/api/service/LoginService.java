@@ -1,8 +1,8 @@
-package com.tokenApi.service;
+package com.api.service;
 
-import com.tokenApi.entity.User;
-import com.tokenApi.pojo.dto.LoginDTO;
-import com.tokenApi.pojo.vo.UserVO;
+import com.api.entity.User;
+import com.api.pojo.dto.LoginDTO;
+import com.api.pojo.vo.UserVO;
 
 import java.util.List;
 

@@ -1,11 +1,11 @@
-package com.tokenApi.service.impl;
+package com.api.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.tokenApi.entity.User;
-import com.tokenApi.mapper.UserMapper;
-import com.tokenApi.pojo.dto.LoginDTO;
-import com.tokenApi.pojo.vo.UserVO;
-import com.tokenApi.service.LoginService;
+import com.api.entity.User;
+import com.api.mapper.UserMapper;
+import com.api.pojo.dto.LoginDTO;
+import com.api.pojo.vo.UserVO;
+import com.api.service.LoginService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
-package com.tokenApi.pojo.custom;
+package com.api.pojo.custom;
 
-import com.tokenApi.enums.HttpResultEnum;
+import com.api.enums.HttpResultEnum;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import net.sf.json.JSONObject;

@@ -1,4 +1,4 @@
-package com.tokenApi.interceptor;
+package com.api.interceptor;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

@@ -1,10 +1,7 @@
-package com.tokenApi.pojo.dto;
+package com.api.pojo.dto;
 
 import lombok.Data;
 import org.springframework.validation.annotation.Validated;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * description 登录DTO

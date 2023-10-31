@@ -1,6 +1,6 @@
-package com.tokenApi.pojo.vo;
+package com.api.pojo.vo;
 
-import com.tokenApi.entity.User;
+import com.api.entity.User;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

@@ -1,6 +1,6 @@
-package com.tokenApi.config;
+package com.api.config;
 
-import com.tokenApi.pojo.custom.ResponseResult;
+import com.api.pojo.custom.ResponseResult;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
 import org.springframework.http.server.ServerHttpRequest;

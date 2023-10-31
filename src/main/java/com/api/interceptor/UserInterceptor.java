@@ -1,11 +1,11 @@
-package com.tokenApi.interceptor;
+package com.api.interceptor;
 
-import com.tokenApi.enums.HttpResultEnum;
+import com.api.enums.HttpResultEnum;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.tokenApi.pojo.custom.ResponseResult;
-import com.tokenApi.pojo.vo.UserVO;
-import com.tokenApi.util.CacheManagerUtil;
-import com.tokenApi.util.ContextUtil;
+import com.api.pojo.custom.ResponseResult;
+import com.api.pojo.vo.UserVO;
+import com.api.util.CacheManagerUtil;
+import com.api.util.ContextUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;

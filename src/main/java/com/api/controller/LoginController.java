@@ -1,15 +1,15 @@
-package com.tokenApi.controller;
+package com.api.controller;
 
-import com.tokenApi.enums.HttpResultEnum;
-import com.tokenApi.pojo.custom.ResponseResult;
-import com.tokenApi.pojo.vo.LoginVO;
-import com.tokenApi.pojo.vo.UserVO;
-import com.tokenApi.util.CacheManagerUtil;
-import com.tokenApi.util.TokenGenerateUtil;
+import com.api.enums.HttpResultEnum;
+import com.api.pojo.custom.ResponseResult;
+import com.api.pojo.vo.LoginVO;
+import com.api.pojo.vo.UserVO;
+import com.api.util.CacheManagerUtil;
+import com.api.util.TokenGenerateUtil;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import com.tokenApi.pojo.dto.LoginDTO;
-import com.tokenApi.service.LoginService;
+import com.api.pojo.dto.LoginDTO;
+import com.api.service.LoginService;
 
 import java.util.List;
 

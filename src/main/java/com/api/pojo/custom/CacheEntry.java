@@ -1,4 +1,4 @@
-package com.tokenApi.pojo.custom;
+package com.api.pojo.custom;
 
 import lombok.AllArgsConstructor;
 

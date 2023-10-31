@@ -1,4 +1,4 @@
-package com.tokenApi.enums;
+package com.api.enums;
 
 /**
  *  Http请求结果枚举类

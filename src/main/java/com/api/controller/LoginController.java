@@ -5,8 +5,10 @@ import com.api.pojo.custom.ResponseResult;
 import com.api.pojo.vo.LoginVO;
 import com.api.pojo.vo.UserVO;
 import com.api.util.CacheManagerUtil;
+import com.api.util.ContextUtil;
 import com.api.util.TokenGenerateUtil;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import com.api.pojo.dto.LoginDTO;
 import com.api.service.LoginService;
@@ -16,6 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 @AllArgsConstructor
+@Slf4j
 public class LoginController {
 
     private final LoginService loginService;
@@ -64,5 +67,17 @@ public class LoginController {
     public ResponseResult<String> testRoute(){
         ResponseResult<String> responseResult=new ResponseResult<>();
         return responseResult.setData("成功进入");
+    }
+
+    /**
+     * 测试当前用户
+     * @return  JSON
+     */
+    @GetMapping("/testCurrentUser")
+    public ResponseResult<String> testCurrentUser(){
+        ResponseResult<String> responseResult=new ResponseResult<>();
+        UserVO userVO= ContextUtil.getCurrentUser();
+        log.info("当前用户信息: {}",userVO);
+        return responseResult.setData("");
     }
 }

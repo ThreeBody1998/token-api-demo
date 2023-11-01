@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication
-@MapperScan(value = "com.tokenApi.mapper")
+@MapperScan(value = "com.api.mapper")
 @ComponentScan(basePackages = {"com.api.pojo", "com.api.service", "com.api.controller", "com.api.interceptor", "com.api.util", "com.api.config"})
 public class TokenApiDemoApplication extends SpringBootServletInitializer {
 
